@@ -1,8 +1,8 @@
 const request = require('request');
-const apis = require('./acesstoken.js');
+const acessToken = require('./acesstoken.js');
 
 const geoLocation = (adress, callback) => {
-  const url = apis.mapbox(adress);
+  const url = acessToken.mapbox(adress);
   request({ url: url, json: true }, (error, response) => {
     // error handler for low-lvl errors
     if (error) {
@@ -14,8 +14,8 @@ const geoLocation = (adress, callback) => {
       // everything went well.
       const feature = response.body.features[0];
       callback(undefined, {
-        longitude: feature.center[0],
-        latitude: feature.center[1],
+        latitude: feature.center[0],
+        longitude: feature.center[1],
         location: feature.place_name,
       });
     }
