@@ -1,8 +1,8 @@
 const acessToken = require('./acesstoken.js');
-const request = require('request')
+const request = require('request');
 
 const foreCast = (latitude, longitude, callback) => {
-  const url = acessToken.darksky(latitude, longitude)
+  const url = acessToken.darksky(latitude, longitude);
   request({ url: url, json: true, }, (error, response) => {
     // error handler for low-lvl errors
     if (error) {
