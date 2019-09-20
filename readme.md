@@ -4,7 +4,6 @@
 
 <ul>
 <li>async javascript;</li>
-<li>API consuming;</li>
 <li>Object destructuring and shortand;</li>
 <li>API consuming(darksky and mapbox);</li>
 </ul>
